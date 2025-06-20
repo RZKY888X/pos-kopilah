@@ -1,0 +1,17 @@
+@BASE_URL = http://localhost:3000/api
+
+### create user
+POST {{BASE_URL}}/users
+Content-Type: application/json
+
+{
+  "name": "Admin User",
+  "userName": "admin",
+  "password": "admin123",
+  "confirmPassword": "admin123",
+  "role": "admin"
+}
+
+### get all users
+GET {{BASE_URL}}/users
+Authorization: Bearer {{$global.accessToken}}
